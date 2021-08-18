@@ -5,7 +5,7 @@ $(document).ready(function(){
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 800,
+    speed: 1000,
     autoplay: true,
     cssEase: 'ease-out'
   });
@@ -16,7 +16,7 @@ $(document).ready(function(){
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 600,
+    speed: 1000,
     autoplay: true,
     cssEase: 'ease-out'
   });
