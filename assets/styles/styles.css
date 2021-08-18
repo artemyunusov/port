@@ -1532,7 +1532,7 @@ h6 {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
   .container {
     padding: 0 15px !important;
   }
