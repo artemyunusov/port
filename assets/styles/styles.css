@@ -146,6 +146,10 @@ h6 {
   margin-left: 10px;
 }
 
+.header__social a:first-child {
+  margin-left: 0;
+}
+
 .header__social a svg {
   height: 20px;
   width: 20px;
@@ -200,6 +204,10 @@ h6 {
 
 .nav__link:last-child {
   padding-right: 0;
+}
+
+.slider {
+  height: 600px;
 }
 
 .slider__item {
@@ -445,6 +453,10 @@ h6 {
   padding: 8px 20px;
 }
 
+.slider__low {
+  max-height: 518px;
+}
+
 .slider__low-item {
   display: flex;
   align-items: center;
@@ -540,17 +552,42 @@ h6 {
   overflow: hidden;
 }
 
+.team__block-img img {
+  display: block;
+}
+
+.team__block-img:hover::before {
+  width: 300%;
+  height: 300%;
+  top: -50%;
+  left: -50%;
+}
+
+.team__block-img:hover {
+  cursor: pointer;
+}
+
+.team__block-img:hover .team__block-icon {
+  opacity: 0;
+}
+
+.team__block-img:hover .team__block-info {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .team__block-img::before {
   content: "";
   position: absolute;
-  height: 25px;
-  width: 25px;
-  top: 25px;
-  left: 25px;
+  top: 30px;
+  left: 30px;
   border-radius: 50%;
+  height: 0;
+  width: 0;
   background: rgba(203, 161, 76, 0.8);
   transition: all ease-in-out 0.5s;
-  z-index: 4;
+  z-index: 5;
 }
 
 .team__block-icon {
@@ -561,6 +598,8 @@ h6 {
   left: 12px;
   background: none;
   z-index: 4;
+  transition: all .15s ease-in-out;
+  transition-delay: .2s;
 }
 
 .team__block-icon::before {
@@ -587,7 +626,7 @@ h6 {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  font-size: 30px;
+  font-size: 25px;
   color: #fff;
   border-radius: 50%;
   background: none;
@@ -605,9 +644,13 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 99;
+  padding: 0 10px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: all .15s ease-in-out;
+  transition-delay: .2s;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -617,6 +660,14 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.team__block-social a {
+  margin-left: 20px;
+}
+
+.team__block-social a:first-child {
+  margin-left: 0;
 }
 
 .team__block-content {
@@ -927,28 +978,44 @@ h6 {
   margin-right: auto;
 }
 
-.burger:hover {
+.burger:active {
   cursor: pointer;
 }
 
-.burger:hover .burger__item:nth-child(2) {
+.burger:active .burger__item:nth-child(2) {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.burger:hover .burger__item:nth-child(1) {
+.burger:active .burger__item:nth-child(1) {
   width: 80%;
   -webkit-transform: rotate(45deg) translate(5px, 2px);
       -ms-transform: rotate(45deg) translate(5px, 2px);
           transform: rotate(45deg) translate(5px, 2px);
 }
 
-.burger:hover .burger__item:nth-child(3) {
+.burger:active .burger__item:nth-child(3) {
   width: 80%;
   -webkit-transform: rotate(-45deg) translate(7px, -4px);
       -ms-transform: rotate(-45deg) translate(7px, -4px);
           transform: rotate(-45deg) translate(7px, -4px);
+}
+
+.oh {
+  position: relative;
+  overflow: hidden;
+}
+
+.oh::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1366px) {
@@ -963,6 +1030,10 @@ h6 {
 
   .header__low-logo img {
     max-width: 80%;
+  }
+
+  .slider {
+    height: 600px;
   }
 
   .slider__item {
@@ -1417,6 +1488,10 @@ h6 {
     margin-left: 15px;
   }
 
+  .slider {
+    height: 450px;
+  }
+
   .slider__item {
     height: 450px;
   }
@@ -1559,7 +1634,7 @@ h6 {
   }
 
   .header__mail {
-    height: 30px;
+    height: 40px;
     justify-content: center;
     margin-right: 0;
     margin: 0 -15px;
@@ -1567,14 +1642,14 @@ h6 {
   }
 
   .header__tel {
-    height: 30px;
+    height: 40px;
     justify-content: center;
     margin: 0 -15px;
     border-bottom: 1px solid #fff;
   }
 
   .header__social {
-    height: 30px;
+    height: 40px;
     align-items: center;
     justify-content: center;
   }
@@ -1583,8 +1658,13 @@ h6 {
     margin-left: 20px;
   }
 
+  .header__social a svg {
+    width: 25px;
+    height: 25px;
+  }
+
   .header__low {
-    height: 50px;
+    height: 60px;
   }
 
   .header__low-logo img {
@@ -1597,6 +1677,10 @@ h6 {
 
   .burger {
     display: flex;
+  }
+
+  .slider {
+    height: 280px;
   }
 
   .slider__item {
@@ -1914,6 +1998,11 @@ h6 {
     margin-top: 40px;
     width: 100%;
     justify-content: center;
+  }
+
+  .footer__mid-social a svg {
+    width: 30px;
+    height: 30px;
   }
 
   .footer__low-img {
